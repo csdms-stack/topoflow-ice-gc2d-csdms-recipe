@@ -1,0 +1,32 @@
+{% set name = "topoflow-ice-gc2d-csdms" %}
+{% set version = "3.4" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  git_url: https://github.com/csdms/topoflow-bridge
+
+requirements:
+  build:
+    - bmi-babel
+    - topoflow
+  run:
+    - bmi-babel
+    - topoflow
+
+test:
+  requires:
+    - pymt
+    - bmi-tester
+
+about:
+  home: http://csdms.colorado.edu/wiki/Model_help:Gc2d
+  license: Apache
+  summary: |
+    GC2D is a two-dimensional finite difference numerical model that
+    is driven by a calculations of glacier mass balance (snow precipitation
+    - melt rate). The model calculates ice surface elevations above a
+    two-dimensional terrain by solving equations for ice flux and mass
+    conservation using explicit methods.
