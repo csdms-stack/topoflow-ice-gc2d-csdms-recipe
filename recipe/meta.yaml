@@ -1,4 +1,4 @@
-{% set name = "topoflow-ice-gc2d-csdms" %}
+{% set name = "csdms-topoflow-ice-gc2d" %}
 {% set version = "3.4" %}
 
 package:
